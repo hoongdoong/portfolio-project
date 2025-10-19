@@ -1,6 +1,13 @@
 import React from 'react';
 
 export const Hero: React.FC = () => {
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   const handleScrollToSkills = () => {
     const skillsSection = document.getElementById('skills');
     if (skillsSection) {
@@ -9,22 +16,25 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="self-stretch flex flex-col items-stretch text-center tracking-[1px] justify-center mt-[100px] max-md:max-w-full max-md:mt-10 mb-40">
-      <div className="text-white text-[80px] font-extrabold max-md:max-w-full max-md:text-[40px]">
+    <section id="hero" className="relative self-stretch flex flex-col items-center text-center tracking-[1px] justify-center h-screen max-md:max-w-full">
+      <div className="text-white text-[80px] font-extrabold max-md:max-w-full max-md:text-[40px] text-gradient mt-12">
         Hi! I'm Hoan Doan
       </div>
       <div className="text-white text-[45px] font-extralight max-md:max-w-full max-md:text-[40px]">
         A Business Analyst
       </div>
       
-      <button 
-        onClick={handleScrollToSkills}
-        className="justify-center items-center shadow-[0_4px_8px_3px_rgba(0,0,0,0.15),0_1px_3px_0_rgba(0,0,0,0.30)] bg-[#73A7E3] px-8 py-4 mt-8 text-base text-white font-medium tracking-[0.15px] rounded-2xl mx-auto hover:shadow-lg transition-shadow"
-      >
-        View my Skills
-      </button>
+      <div className="relative group mt-8 mx-auto transition-transform duration-300 ease-in-out hover:scale-105">
+        <div className="absolute -inset-px rounded-2xl shining-border opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <button 
+          onClick={handleScrollToSkills}
+          className="relative hero-button justify-center items-center shadow-[0_4px_8px_3px_rgba(0,0,0,0.15),0_1px_3px_0_rgba(0,0,0,0.30)] bg-[#3A4B89] px-8 py-4 text-base text-white font-medium tracking-[0.15px] rounded-2xl transition-colors duration-300 group-hover:bg-[#4A5B99]"
+        >
+          View my Resume
+        </button>
+      </div>
       
-      <div className="border w-px shrink-0 h-[284px] mt-[41px] border-[rgba(115,167,227,1)] border-solid max-md:mt-10 mx-auto" />
+      <div className="running-line shrink-0 h-[150px] mt-[41px] max-md:mt-10 mx-auto" />
       
       <img
         onClick={handleScrollToSkills}

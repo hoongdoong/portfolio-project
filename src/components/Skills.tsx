@@ -2,16 +2,13 @@ import React from 'react';
 import { SkillChip } from './ui/skill-chip';
 
 export const Skills: React.FC = () => {
-  const skillsRow1 = [
+  const skills = [
     'Healthcare Domain',
     'HIS',
     'Communication',
     'Proposal Making',
     'Data Analysis',
-    'Figma'
-  ];
-
-  const skillsRow2 = [
+    'Figma',
     'Requirements Analyzing',
     'Agile',
     'Scrum',
@@ -19,10 +16,7 @@ export const Skills: React.FC = () => {
     'Design Thinking',
     'Problem Solving',
     'Analytical Thinking',
-    'Project Coordinating'
-  ];
-
-  const skillsRow3 = [
+    'Project Coordinating',
     'Researching',
     'Structured Thinking',
     'Solution Consulting',
@@ -31,27 +25,27 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="self-stretch flex w-full flex-col items-center text-sm text-white font-medium text-center tracking-[0.1px] leading-none mt-[46px] px-5 max-md:max-w-full max-md:mt-10">
-      <h2 className="text-white text-center text-4xl font-medium leading-none tracking-[0.1px] mt-[38px] mb-[46px]">
-        Quick Look at Skills
+    <section id="skills" className="h-screen self-stretch flex w-full flex-col items-center text-sm text-white font-medium text-center tracking-[0.1px] leading-none px-5 max-md:max-w-full justify-center">
+      <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] max-md:text-[40px] mb-8">
+        My Skills
       </h2>
       
-      <div className="self-stretch flex w-full items-center gap-[13px] justify-center flex-wrap max-md:max-w-full">
-        {skillsRow1.map((skill, index) => (
-          <SkillChip key={index} label={skill} />
-        ))}
-      </div>
-      
-      <div className="flex items-center gap-[13px] justify-center flex-wrap mt-2.5 max-md:max-w-full">
-        {skillsRow2.map((skill, index) => (
-          <SkillChip key={index} label={skill} />
-        ))}
-      </div>
-      
-      <div className="flex items-center gap-[13px] justify-center flex-wrap mt-2.5 max-md:max-w-full">
-        {skillsRow3.map((skill, index) => (
-          <SkillChip key={index} label={skill} />
-        ))}
+      <div className="self-stretch flex w-full flex-col items-center gap-[13px] justify-center max-md:max-w-full">
+        <div className="flex items-center gap-[13px] justify-center flex-wrap">
+            {skills.slice(0, 7).map((skill, index) => (
+            <SkillChip key={index} label={skill} />
+            ))}
+        </div>
+        <div className="flex items-center gap-[13px] justify-center flex-wrap">
+            {skills.slice(7, 13).map((skill, index) => (
+            <SkillChip key={index} label={skill} />
+            ))}
+        </div>
+        <div className="flex items-center gap-[13px] justify-center flex-wrap">
+            {skills.slice(13, 19).map((skill, index) => (
+            <SkillChip key={index} label={skill} />
+            ))}
+        </div>
       </div>
     </section>
   );

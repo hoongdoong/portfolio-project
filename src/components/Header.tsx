@@ -1,27 +1,46 @@
 import React from 'react';
 
 export const Header: React.FC = () => {
+  const handleScroll = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const targetPosition = targetElement.offsetTop;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1500; // Slower scroll duration in ms
+      let startTime: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      };
+
+      // Easing function
+      const ease = (t: number, b: number, c: number, d: number) => {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      };
+
+      requestAnimationFrame(animation);
+    }
+  };
+
   return (
-    <header className="relative flex w-full flex-col overflow-hidden items-center pt-14 max-md:max-w-full">
-      <nav className="flex items-center gap-[40px_188px] text-2xl text-white font-normal tracking-[0.4px] leading-none flex-wrap px-[60px] py-5 rounded-[30px] max-md:max-w-full max-md:px-5">
-        <div className="self-stretch my-auto">
-          Hoan Doan
-        </div>
-        <div className="self-stretch flex min-w-60 items-center gap-[35px] flex-wrap my-auto max-md:max-w-full">
-          <a href="#about" className="self-stretch my-auto hover:opacity-80 transition-opacity">
-            About Me
-          </a>
-          <a href="#resume" className="self-stretch my-auto hover:opacity-80 transition-opacity">
-            Resume
-          </a>
-          <a href="#contact" className="self-stretch my-auto hover:opacity-80 transition-opacity">
-            Contact
-          </a>
-          <a href="#portfolio" className="self-stretch my-auto hover:opacity-80 transition-opacity">
-            Portfolio Projects
-          </a>
-        </div>
-      </nav>
+    <header className="z-50 flex justify-center pt-8">
+      <div className="shining-border rounded-full p-px">
+        <nav className="flex items-center justify-center gap-8 px-8 py-4 text-xl text-white bg-[#060b28] rounded-full">
+            <a href="#about" onClick={(e) => handleScroll(e, 'about')} className="hover:opacity-80 transition-opacity">About Me</a>
+            <a href="https://drive.google.com/file/d/1Rq20WLyxUANQ1vuTPNVa0Soew4AOKFx7/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">My PDF Resume</a>
+            <a href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="hover:opacity-80 transition-opacity">Contact</a>
+            <a href="#projects" onClick={(e) => handleScroll(e, 'projects')} className="hover:opacity-80 transition-opacity">Portfolio</a>
+        </nav>
+      </div>
     </header>
   );
 };
