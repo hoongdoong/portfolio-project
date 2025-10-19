@@ -99,3 +99,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .bg-theme-gradient {
+    background: linear-gradient(180deg, hsl(222.2, 47.4%, 11.2%) 0%, hsl(222.2, 47.4%, 21.2%) 100%);
+  }
+  .text-gradient {
+    background: linear-gradient(to right, white 0%, #73A7E3 73%, #0625C6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -36,7 +36,7 @@ export const Certificates: React.FC = () => {
     <section id="certificates" className="flex flex-col items-center">
       <div className="border w-px shrink-0 h-[101px] mt-7 border-[rgba(115,167,227,1)] border-solid" />
       
-      <h2 className="text-[64px] font-extrabold tracking-[-1.92px] mt-8 max-md:text-[40px]">
+      <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] mt-8 max-md:text-[40px]">
         Certificates
       </h2>
       

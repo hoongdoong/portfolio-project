@@ -47,7 +47,7 @@ export const Contact: React.FC = () => {
         alt=""
       />
       
-      <h2 className="text-white text-[64px] font-extrabold tracking-[-1.92px] opacity-90 bg-clip-text mt-[45px] max-md:text-[40px] max-md:mt-10">
+      <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] mt-[45px] max-md:text-[40px] max-md:mt-10">
         Get in touch
       </h2>
       

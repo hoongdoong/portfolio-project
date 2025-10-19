@@ -5,7 +5,7 @@ export const Education: React.FC = () => {
     <section id="education" className="flex flex-col items-center">
       <div className="border w-px shrink-0 h-[157px] mt-11 border-[rgba(115,167,227,1)] border-solid max-md:mt-10" />
       
-      <h2 className="text-[64px] font-extrabold tracking-[-1.92px] mt-[23px] max-md:text-[40px]">
+      <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] mt-[23px] max-md:text-[40px]">
         Education
       </h2>
       

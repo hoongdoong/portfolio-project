@@ -6,7 +6,7 @@ export const Experience: React.FC = () => {
       <div className="border w-px shrink-0 h-[101px] mb-[63px] border-[rgba(115,167,227,1)] border-solid" />
       
       <div className="z-10 flex mt-[-17px] w-[959px] max-w-full flex-col items-center">
-        <h2 className="text-[64px] font-extrabold tracking-[-1.92px] max-md:text-[40px]">
+        <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] max-md:text-[40px]">
           Experience
         </h2>
         
