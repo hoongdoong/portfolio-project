@@ -20,16 +20,28 @@ const Index: React.FC = () => {
     >
       <div
         style={{
-          background: 'linear-gradient(to left bottom, rgba(2, 2, 55, 0.7), rgba(0, 0, 0, 0.9))',
+          background: 'linear-gradient(to left bottom, rgba(2, 2, 99, 0.7), rgba(0, 0, 0, 0.9))',
         }}
       >
         <Header />
-        <Hero />
-        <Skills />
-        <Experience />
-        <Education />
-        <Certificates />
-        <Contact />
+        <section id="hero" style={{ padding: '2rem 0' }}>
+          <Hero />
+        </section>
+        <section id="skills" style={{ padding: '2rem 0' }}>
+          <Skills />
+        </section>
+        <section id="experience" style={{ padding: '2rem 0' }}>
+          <Experience />
+        </section>
+        <section id="education" style={{ padding: '2rem 0' }}>
+          <Education />
+        </section>
+        <section id="certificates" style={{ padding: '2rem 0' }}>
+          <Certificates />
+        </section>
+        <section id="contact" style={{ padding: '2rem 0' }}>
+          <Contact />
+        </section>
       </div>
     </main>
   );

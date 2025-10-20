@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Experience: React.FC = () => {
   return (
-    <section id="experience" className="self-stretch flex flex-col items-center justify-center h-screen px-20 max-md:max-w-full max-md:px-5">
+    <section id="experience" className="self-stretch flex flex-col items-center justify-center py-20 px-20 max-md:max-w-full max-md:px-5 lg:h-screen">
       
       <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] max-md:text-[40px] mb-10">
         Experience
@@ -32,7 +32,9 @@ export const Experience: React.FC = () => {
           <p className="text-white text-lg font-normal leading-relaxed tracking-[-0.25px] mt-4 text-justify">
             Implement IQVIA Hospital Information System for Phuong Chau
             International Hospital Group to comply with Vietnam Ministry of
-            Health regulation and JCI Standard.
+            Health regulation and JCI Standard. Conduct training to end users
+            from medical (doctor, nurses, medical secretary...) to customer service
+            and planning department user.
           </p>
         </div>
 

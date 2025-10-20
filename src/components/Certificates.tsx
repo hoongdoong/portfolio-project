@@ -10,7 +10,7 @@ interface CertificateCardProps {
 
 const CertificateCard: React.FC<CertificateCardProps> = ({ title, date, imageSrc, imageAlt = "Certificate", link }) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-800 bg-opacity-50 rounded-lg p-3 w-full max-w-lg transition-transform duration-300 hover:scale-105">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center bg-gray-800 bg-opacity-50 rounded-lg p-3 w-full max-w-lg transition-transform duration-300 hover:scale-105 hover:bg-gray-700">
       <img
         src={imageSrc}
         className="aspect-[1] object-contain w-16 h-16 mr-4"

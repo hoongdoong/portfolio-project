@@ -14,7 +14,7 @@ export const Education: React.FC = () => {
         alt="Foreign Trade University logo"
       />
       
-      <div className="w-[381px] max-w-full text-white text-center tracking-[0.1px] mt-7">
+      <div className="w-[391px] max-w-full text-white text-center tracking-[0.1px] mt-7">
         <div className="text-2xl font-medium leading-none">
           Yes I'm from an Economics School!
         </div>

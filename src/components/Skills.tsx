@@ -25,7 +25,7 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="h-screen self-stretch flex w-full flex-col items-center text-sm text-white font-medium text-center tracking-[0.1px] leading-none px-5 max-md:max-w-full justify-center">
+    <section id="skills" className="self-stretch flex w-full flex-col items-center text-sm text-white font-medium text-center tracking-[0.1px] leading-none px-5 max-md:max-w-full justify-center py-20 lg:h-screen">
       <h2 className="text-gradient text-[64px] font-extrabold tracking-[-1.92px] max-md:text-[40px] mb-8">
         My Skills
       </h2>
