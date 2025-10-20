@@ -37,7 +37,7 @@ export const Contact: React.FC = () => {
           Drop me a message!
         </h3>
         <form
-          action="https://docs.google.com/forms/d/e/1FAIpQLScl8CV22n_33VBm25gJt3XFj_2-YvCg7n2yK1L6e-pW-qB-wA/formResponse"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfKlKE8oZytzrC5B9TipAauDoRTfDZ48J6JrsJVUfyvcAyrhg/formResponse"
           method="POST"
           target="hidden_iframe"
           onSubmit={handleSubmit}
@@ -46,34 +46,33 @@ export const Contact: React.FC = () => {
           <div className="flex gap-4">
             <input
               type="text"
-              name="entry.1995393134"
+              name="entry.2005620554"
               placeholder="First Name"
               required
               className="input-field"
             />
             <input
               type="text"
-              name="entry.1139196321"
+              name="entry.745613005"
               placeholder="Last Name"
-              required
               className="input-field"
             />
           </div>
           <input
             type="email"
-            name="entry.2052528277"
+            name="entry.1045781291"
             placeholder="Email"
             required
             className="input-field"
           />
           <input
             type="tel"
-            name="entry.127443339"
+            name="entry.1166974658"
             placeholder="Phone Number"
             className="input-field"
           />
           <textarea
-            name="entry.1018890938"
+            name="entry.839337160"
             placeholder="Message"
             required
             rows={4}
